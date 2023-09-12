@@ -2,6 +2,9 @@ header {
     background-color: #333;
     color: #fff;
     padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 nav ul {
@@ -19,7 +22,46 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
+.logo-container{
+    order: 2;
+}
 
+.logo-container img{
+    max-height: 50px;
+}
+
+.search-container{
+    order: 2;
+    display: flex;
+    align-items: center;
+}
+
+.search-container input[type="text"]{
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 16px;
+    width: 200px;
+    height: 30px;
+}
+
+.search-container label {
+    margin-right: 10px;
+}
+
+#search-button{
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #0056b3;
+}
 /* Example hero section styles */
 #hero {
     text-align: center;

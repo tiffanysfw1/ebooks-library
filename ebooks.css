@@ -1,3 +1,6 @@
+/* Add this CSS inside your <style> block or CSS file */
+
+/* Base styles for larger screens (laptops/desktops) */
 header {
     background-color: #333;
     color: #fff;
@@ -22,23 +25,24 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
-.logo-container{
+
+.logo-container {
     order: 2;
 }
 
-.logo-container img{
+.logo-container img {
     max-height: 50px;
 }
 
-.search-container{
-    order: 2;
+.search-container {
+    order: 3;
     display: flex;
     align-items: center;
 }
 
-.search-container input[type="text"]{
+.search-container input[type="text"] {
     padding: 10px;
-    border:none;
+    border: none;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 16px;
@@ -50,7 +54,7 @@ nav ul li a {
     margin-right: 10px;
 }
 
-#search-button{
+#search-button {
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -62,6 +66,7 @@ nav ul li a {
 #search-button:hover {
     background-color: #0056b3;
 }
+
 /* Example hero section styles */
 #hero {
     text-align: center;
@@ -105,22 +110,76 @@ nav ul li a {
 .button:hover {
     background-color: #0056b3;
 }
-.feature img
-{
+
+.feature img {
     max-width: 150%;
     height: auto;
 }
+
 /* Example media query for smaller screens */
 @media (max-width: 768px) {
     /* Adjust styles for smaller screens here */
     header {
         padding: 10px; /* Reduce header padding for smaller screens */
+        flex-direction: column; /* Stack header elements vertically */
+        align-items: center; /* Center align header elements */
     }
+
+    nav ul {
+        text-align: center; /* Center align navigation links */
+    }
+
+    nav ul li {
+        display: block; /* Display navigation links as blocks for mobile */
+        margin: 10px 0; /* Add some spacing between navigation links */
+    }
+
+    .logo-container {
+        order: 1; /* Move the logo to the top on mobile */
+    }
+
+    .search-container {
+        order: 2; /* Move the search bar below the logo on mobile */
+        margin-top: 20px; /* Add some spacing between search and content */
+    }
+
+    .search-container input[type="text"] {
+        width: 100%; /* Make the search input full width on mobile */
+    }
+
     .ebook-grid {
         grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 10px; /* Reduce the gap between ebooks on mobile */
     }
+
+    .ebook {
+        padding: 20px;
+    }
+
     .feature img {
-        max-width: 100%; /* Ensure images scale within their containers on smaller screens */
+        max-width: 100%;
         height: auto;
+    }
+
+    /* Adjust font size for better readability on mobile */
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Center align the "Read Now" button */
+    .button {
+        text-align: center;
     }
 }
